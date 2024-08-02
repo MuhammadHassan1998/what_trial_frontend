@@ -60,7 +60,7 @@ const DataTable = () => {
       const fetchProducts = async () => {
         try {
           const response = await axios.get<ProductsApiResponse>(
-            "http://localhost:8000/api/products/",
+            "https://what-trial-project.us.aldryn.io/api/products/",
             {
               headers: {
                 Authorization: `Bearer ${user?.accessToken}`,
