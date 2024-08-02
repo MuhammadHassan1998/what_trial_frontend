@@ -25,7 +25,7 @@ export const columns: ColumnDef<Product>[] = [
             const id = row.original.id;
             try {
               await axios.post(
-                `http://localhost:8000/api/select-product/${id}/`,
+                `https://what-trial-project.us.aldryn.io/api/select-product/${id}/`,
                 { selected: isSelected },
                 {
                   headers: {
