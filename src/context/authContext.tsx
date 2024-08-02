@@ -26,7 +26,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const login = async (formData: FormData) => {
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/login/",
+        "https://what-trial-project.us.aldryn.io/api/login/",
         formData,
       );
       
@@ -54,7 +54,7 @@ const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
     const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
     try {
       await axios.post(
-        "http://localhost:8000/api/logout/",
+        "https://what-trial-project.us.aldryn.io/api/logout/",
         { refresh_token: user.refreshToken },
         {
           headers: {
